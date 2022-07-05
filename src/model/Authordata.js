@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')//Accessing mongoose package
-mongoose.connect('mongodb://localhost:27017/library');//Database connection
+mongoose.connect('mongodb+srv://usertwo:usertwo@libraryapp.lswirdz.mongodb.net/LIBRARYAPP?retryWrites=true&w=majority');//Database connection
 const Schema = mongoose.Schema;//Schema definition
 
 const AuthorSchema = new Schema({
@@ -12,3 +12,4 @@ const AuthorSchema = new Schema({
  var Authordata = mongoose.model('authordata',AuthorSchema);
  
  module.exports = Authordata;
+ 
