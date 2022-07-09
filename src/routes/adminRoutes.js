@@ -10,7 +10,6 @@ function router(nav){
         
     })
     
-    
     adminRouter.post('/add',function(req,res){
        var item = {
        title: req.body.title,
