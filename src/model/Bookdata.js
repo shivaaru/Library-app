@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')//Accessing mongoose package
-//Database connection
+mongoose.connect('mongodb+srv://usertwo:usertwo@libraryapp.lswirdz.mongodb.net/LIBRARYAPP?retryWrites=true&w=majority');//Database connection
 const Schema = mongoose.Schema;//Schema definition
 
 const BookSchema = new Schema({
