@@ -63,7 +63,7 @@ app.get("/register", appController.register_get);
 app.post("/register", appController.register_post);
 
 // Dashboard Page
-app.get("/dashboard", isAuth, appController.dashboard_get);
+app.get("/index", isAuth, appController.dashboard_get);//
 
 app.post("/logout", appController.logout_post);
 

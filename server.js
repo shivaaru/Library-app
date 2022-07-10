@@ -40,6 +40,7 @@ const store = new MongoDBSession({
         link:'/admins',name:'Add Author'
     },
    
+   
   ];//
 
 const authorRouter = require('./src/routes/authorRoutes')(nav);
@@ -134,6 +135,7 @@ app.get("/dashboard",isAuth,(req,res)=>{
 app.get("/index",isAuth,(req,res)=>{
   res.render("index");
 });
+
 app.post('/logout',(req,res)=>{
   req.session.destroy((err)=>{
     if(err)throw err;

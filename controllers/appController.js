@@ -31,7 +31,7 @@ exports.login_post = async (req, res) => {
 
   req.session.isAuth = true;
   req.session.username = user.username;
-  res.redirect("/dashboard");
+  res.redirect("/index");//
 };
 
 exports.register_get = (req, res) => {
@@ -47,7 +47,7 @@ exports.register_post = async (req, res) => {
 
   if (user) {
     req.session.error = "User already exists";
-    return res.redirect("/register");
+    return res.redirect("/register");//
   }
 
   const hasdPsw = await bcrypt.hash(password, 12);
@@ -65,7 +65,7 @@ exports.register_post = async (req, res) => {
 
 exports.dashboard_get = (req, res) => {
   const username = req.session.username;
-  res.render("dashboard", { name: username });
+  res.render("index", { name: username });
 };
 
 exports.logout_post = (req, res) => {
