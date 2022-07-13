@@ -178,6 +178,11 @@ span
 	bottom:100px;
 	position:absolute;
 }
+h4{
+    color: white;
+    position: absolute;
+    left: 70px;
+}
 #login
 {
 	left:50px;
@@ -222,13 +227,15 @@ span
               <button type='button'class='toggle-btn'>Log In</button>
               <!---<button type='button'onclick='register()'class='toggle-btn'>Register</button>---->
           </div>
-          <form id='login' class='input-group-login' action="/login" method="POST">
+          <form id='login' class='input-group-login' action="/login" method="POST" autocomplete="off">
               <input type='email'class='input-field'placeholder='Email Id' name="email" required>
                <input type='password'class='input-field'placeholder='Enter Password' name="password" required>
   <br>
   <br>
   <br>
   <button type='submit'class='submit-btn'>Log in</button>
+  <br>
+  <h4>Sign up before Login</h4>
   <br>
   <br>
   <a id="flower" href="/register">Sign up</a>
